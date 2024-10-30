@@ -1,0 +1,21 @@
+{
+  "name": "app-extensions",
+  "version": "1.0.0",
+  "main": "web/index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "scaffold": "shopify app scaffold",
+    "deploy": "shopify app config use staging; shopify app deploy",
+    "deploy:local": "shopify app config use local; shopify app deploy",
+    "deploy:prod": "shopify app config use prod; shopify app deploy --no-release"
+  },
+  "devDependencies": {
+    "@shopify/app": "3.58.2",
+    "@shopify/cli": "3.68.0"
+  },
+  "author": "jane"
+}

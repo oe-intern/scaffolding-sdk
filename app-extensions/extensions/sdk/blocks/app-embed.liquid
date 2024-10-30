@@ -1,0 +1,23 @@
+<script id="app-config">
+  // place the app at the bottom of body
+  const newApp = document.createElement('div');
+
+  newApp.setAttribute('id', 'scaffolding-sdk');
+  document.body.appendChild(newApp);
+
+  appStore = {
+    currency: "{{ shop.currency }}",
+    moneyFormat: {{ shop.money_format | json }},
+    page: "{{ template.name }}",
+  }
+</script>
+
+<script src="{{ 'app.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "App Core",
+    "target": "body",
+    "settings": []
+  }
+{% endschema %}
